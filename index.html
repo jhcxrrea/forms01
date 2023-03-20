@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>Formulário de Evento</title>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Crie e compartilhe seu evento.</h1>
+      <p>O primeiro passo, é preencher esse
+        formulário de inscrição.</p>
+    </header>
+    <form id="event">
+      <fieldset>
+        <legend>Informações do Evento</legend>
+        <div class="input-wrapper">
+          <label for="event-tittle" id="tittle">Título do Evento <span>(mínimo 8 caracteres)</span></label>
+          <input type="text" name="event-tittle" id="event-tittle" required minlength="8">
+        </div>
+        <div class="input-wrapper">
+          <label for="event-link">Link do Evento <span>(comece com https://)</span></label>
+          <input type="text" name="event-link" id="event-link">
+        </div>
+        <div class="input-wrapper">
+          <label for="event-contact">Whatsapp para contato <span>(somente números)</span></label>
+          <input type="number" name="event-contact" id="event-contact">
+        </div>
+        <div class="input-info">
+          <label for="event-inf">Informações extras</label>
+          <textarea name="event-inf" id="event-inf" cols="30" rows="10" maxlength="300"></textarea>
+        </div>
+        <div class="input-category">
+          <label for="input-category">Categoria</label>
+          <select name="event-category" id="event-category">
+            <option value="" disabled selected>Tipo de Evento</option>
+            <option value="opcao1">Eventos sociais</option>
+            <option value="opcao2">Eventos corporativos</option>
+            <option value="opcao3">Eventos acadêmicos e educacionais</option>
+            <option value="opcao4">Eventos culturais e de entretenimento</option>
+            <option value="opcao5">Eventos esportivos</option>
+          </select>
+        </div>
+        <legend>Privacidade</legend>
+        <div class="input-wrapper">
+          <label for="event-mail" id="tittle">E-mail do administrador <span>(digite um email válido)</span></label>
+          <input type="text" name="mailadm" id="mailadm">
+        </div>
+        <div class="input-wrapper">
+          <label for="event-pwd">Senha de acesso para os participantes <span>(mínimo 8 caracteres)</span></label>
+          <input type="password" name="pwdadm" id="pwdadm" required minlength="8">
+        </div>
+        <div class="input-pp">
+          <input type="checkbox" name="event-private" id="event-private">
+          <label for="event-private">Evento Privado</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <div class="fieldset-wrapper">
+          <legend>Dia e hora</legend>
+  
+          <div class="col-3">
+            <div class="input-wrapper">
+              <label for="event-data">Data</label>
+              <input type="date" id="event-date" />
+            </div>
+    
+            <div class="input-wrapper">
+              <label for="event-hour">Das</label>
+              <input type="time" id="event-begin" />
+            </div>
+  
+            <div class="input-wrapper">
+              <label for="event-hour">Até</label>
+              <input type="time" id="event-end" />
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+    <footer>
+      <input form="event" class="button" type="submit" value="Salvar evento">
+    </footer>
+  </div>
+</body>
+</html>
